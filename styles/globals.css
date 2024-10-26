@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media screen and (max-width:640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Tailwind Styles*/
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.button_solid {
+  @apply h-10 left-[92.37px] top-0 absolute justify-start items-start inline-flex px-5 py-2.5 bg-[#4caf4f] rounded-md justify-start items-center gap-2.5 flex text-center text-white text-sm font-medium font-['Inter'] leading-tight
+}
+
+.button_white {
+  @apply h-10 left-0 top-[2px] absolute justify-start items-start inline-flex px-5 py-2.5 bg-[#f5f7f9] rounded-md justify-start items-center gap-2.5 flex text-center text-[#4caf4f] text-sm font-medium font-['Inter'] leading-tight
+}
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-sm text-gray-700 hover:text-gray-500 font-medium;
+}
+
+.menu_items {
+  @apply text-center text-black text-base font-medium font-['Inter'] leading-tight
+}
